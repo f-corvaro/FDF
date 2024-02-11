@@ -19,6 +19,19 @@
 
 <h3 align="center">Index</h3>
 
+<p align="center">
+  <a href="#folder-structure">1 - Folder Structure</a><br>
+  <a href="#about">2 - About</a><br>
+  <a href="#resources-given">3 - Resources Given</a><br>
+  <a href="#bonus-part">4 - Bonus Part</a><br>
+  <a href="#evaluation">5 - Evaluation</a><br>
+  <a href="#correction-sheet">6 - Correction Sheet</a><br>
+  <a href="#support-me">7 - Support Me</a><br>
+  <a href="#skills-developed">8 - Skills Developed</a><br>
+  <a href="#sources">9 - Sources</a><br>
+  <a href="#license">10 - License</a><br>
+  <a href="#author">11 - Author</a><br>
+</p>
 
 
 ## Folder Structure
