@@ -21,6 +21,34 @@
 
 
 
+## Folder Structure
+
+<p align="justify">
+
+```
+```
+
+## About
+
+
+
+## Bonus Part
+
+
+
+## Evaluation
+
+### Correction sheet
+<a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf1.png">
+
+<a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf2.png">
+
+<a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf3.png">
+
+<a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf4.png">
+
+</p>
+<br>
 
 
 ## Support Me
@@ -42,6 +70,12 @@ If you want to support me:</p>
     <img src="https://skillicons.dev/icons?i=git,c,vim,vscode" />
   </a>
 </p><br>
+
+## Sources
+
+- [minilibx doc](https://harm-smits.github.io/42docs/libs/minilibx)
+
+<br>
 
 ## License
 <p align="center">
