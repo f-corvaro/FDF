@@ -161,6 +161,32 @@ You will get some extra points if you can:
 - Rotate your model.
 - Add one more bonus of your choice.
 
+## MiniLibX
+
+
+First of all, you need to choose the version suitable for your system. Secondly, extract the library and rename it to ```mlx``` for macOS and to ```mlx_linux``` for Linux.
+
+MiniLibX for Linux requires xorg, x11 and zlib, therefore you will need to install the following dependencies: xorg, libxext-dev and zlib1g-dev. Installing these dependencies on Ubuntu can be done as follows:
+
+```bash
+sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
+```
+
+Now, all that's left is to configure MLX. Just run the configure script in the root of the given repository, and you are good to go.
+
+```bash
+./configure
+```
+
+You will receive this message:
+
+```bash
+configure [info] : Execute "make all" from file "test/makefile.gen"
+gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
+gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
+```
+
+
 ## Evaluation
 
 ### Correction sheet
