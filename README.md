@@ -144,11 +144,12 @@ You need to use the right functions to be able to read data from the file in a q
 
 [linux v.](https://github.com/f-corvaro/FDF/tree/main/resources_linux)
 
-You can find the resources given from my 42School for this project. In both folder you can find:
-- The maps that you need to run;
-- A binary file to tests the maps;
-- minilibx;
-- sources.
+You can find the resources provided by my 42School for this project in both folders. These resources include:
+- The maps;
+- A binary file to test the maps;
+- Different versions of the MinilibX library: I would use the Sierra version for macOS and the MinilibX-Linux for Linux.
+
+The macOS version includes files with the *.m extension in the folder. The Linux version doesn't have these *.m files as Linux doesn't natively support Objective-C. Instead, it uses C files for the implementation. This is one of the main differences between the two versions of the library.
 
 ## Bonus Part
 
