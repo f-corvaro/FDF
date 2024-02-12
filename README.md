@@ -1,8 +1,8 @@
-<h1 align="center">FDF</h1>
+<h1 align="center">FDF - In developtment</h1>
 
 <p align="center">
   <a href="https://github.com/f-corvaro/FDF">
-	<img src="https://github.com/f-corvaro/FDF/blob/main/.extra/fdf.png" alt="fdf">
+	<img src="https://github.com/f-corvaro/FDF/blob/main/.extra/FDF.png" alt="fdf">
   </a>
 </p>
 
