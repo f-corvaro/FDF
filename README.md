@@ -22,7 +22,7 @@
 <p align="center">
   <a href="#folder-structure">1 - Folder Structure</a><br>
   <a href="#about">2 - About</a><br>
-  <a href="#resources-given">3 - Resources Given</a><br>
+<a href="#provided-resources-and-library-differences">3 - Provided Resources and Library Differences</a><br>
   <a href="#bonus-part">4 - Bonus Part</a><br>
   <a href="#evaluation">5 - Evaluation</a><br>
   <a href="#correction-sheet">6 - Correction Sheet</a><br>
@@ -138,7 +138,7 @@ You need to use the right functions to be able to read data from the file in a q
 
 - Clicking on the cross on the window’s frame must close the window and quit the program in a clean way.
 
-## Resources given
+## Provided Resources and Library Differences
 
 [macOS v.](https://github.com/f-corvaro/FDF/tree/main/rescources_macos)
 
