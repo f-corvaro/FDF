@@ -148,6 +148,8 @@ You need to use the right functions to be able to read data from the file in a q
 
 [linux v.](https://github.com/f-corvaro/FDF/tree/main/resources_linux)
 
+[maps](https://github.com/f-corvaro/FDF/tree/main/maps)
+
 You can find the resources provided by my 42School for this project in both folders. These resources include:
 - The maps;
 - A binary file to test the maps;
