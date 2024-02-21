@@ -201,7 +201,7 @@ This script is used to run tests on the `fdf` program with various map files.
 
 <p align="justify">
 
-**Before running this script, ensure that it is placed in the same directory as your `fdf` program. Also, make sure to run `make all` or `make bonus` in your `fdf` directory to compile all necessary files.**
+**Before running this script, ensure that it is placed in the same directory as your `fdf` program. Also, make sure to run `make all` or `make bonus` in your `fdf` directory to compile all necessary files. You have the option to utilize either standard or custom maps for testing your program.**
 
 1. The script asks the user to enter the path to the directory containing the map files. If the user doesn't provide a path, it defaults to `./maps`.
 
@@ -219,7 +219,7 @@ This script is used to run tests on the `fdf` program with various map files.
 
 </p>
 
-## Usage
+### Usage
 
 <p align="justify">
 
