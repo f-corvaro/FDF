@@ -24,13 +24,14 @@
   <a href="#about">2 - About</a><br>
 <a href="#provided-resources-and-library-differences">3 - Provided Resources and Library Differences</a><br>
   <a href="#bonus-part">4 - Bonus Part</a><br>
-  <a href="#evaluation">5 - Evaluation</a><br>
-  <a href="#correction-sheet">6 - Correction Sheet</a><br>
-  <a href="#support-me">7 - Support Me</a><br>
-  <a href="#skills-developed">8 - Skills Developed</a><br>
-  <a href="#sources">9 - Sources</a><br>
-  <a href="#license">10 - License</a><br>
-  <a href="#author">11 - Author</a><br>
+  <a href="#tester">5 - Tester</a><br>
+  <a href="#evaluation">6 - Evaluation</a><br>
+  <a href="#correction-sheet">7 - Correction Sheet</a><br>
+  <a href="#support-me">8 - Support Me</a><br>
+  <a href="#skills-developed">9 - Skills Developed</a><br>
+  <a href="#sources">10 - Sources</a><br>
+  <a href="#license">11 - License</a><br>
+  <a href="#author">12 - Author</a><br>
 </p>
 
 
@@ -186,6 +187,49 @@ gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
 gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
 ```
 
+## Tester
+
+### run_fdf_tests.sh
+
+<p align="justify">
+
+This script is used to run tests on the `fdf` program with various map files.
+
+</p>
+
+#### How it works
+
+<p align="justify">
+
+**Before running this script, ensure that it is placed in the same directory as your `fdf` program. Also, make sure to run `make all` or `make bonus` in your `fdf` directory to compile all necessary files.**
+
+1. The script asks the user to enter the path to the directory containing the map files. If the user doesn't provide a path, it defaults to `./maps`.
+
+2. The script determines the operating system it's running on. This is used later to decide which command to use for checking for memory leaks.
+
+3. The script counts the total number of map files in the directory.
+
+4. The script then enters a loop where it processes each map file one by one.
+
+5. For each map file, it prints a message indicating which map is currently being processed and how many maps are left.
+
+6. If the operating system is Linux, it uses `valgrind` to check for memory leaks. If the operating system is macOS, it uses the `leaks` command.
+
+7. After processing each map file, it pauses and waits for the user to press enter before continuing to the next map file. This pause is added so that the user can take the time to inspect the output for any memory leaks in detail.
+
+</p>
+
+## Usage
+
+<p align="justify">
+
+To run the script, navigate to the directory containing the script and run the following command:
+
+```shellscript
+bash run_fdf_tests.sh
+```
+
+</p>
 
 ## Evaluation
 
