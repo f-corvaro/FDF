@@ -46,16 +46,19 @@
 ## About
 
 <p align="justify">
+
 The FDF project is a 3D Wireframe Viewer. It's a software development project that focuses on graphics programming, specifically in the field of rendering. The main goal of the project is to create a simplified 3D graphic representation of a relief landscape.
 The project takes a file as input, which contains a set of coordinates. Each coordinate represents a point in space (X, Y, Z) and corresponds to a pixel on the screen. The X and Y values are the coordinates on the screen, and the Z value will be represented by the color of the pixel.
 The FDF project is written in C, using the miniLibX, a simple graphics library provided for the project. It includes features like rotation, zooming, and changing the color gradient.
 This project is a great opportunity to learn about 3D projections, event-driven programming, and how to use graphics libraries. It's a challenging project that requires a good understanding of mathematics, particularly matrix and vector operations.
 Please note that the FDF project is part of the graphics branch of the 42 School curriculum. It's a great way to dive into graphics programming and start building more complex projects.
+
 </p>
 
 **Common Instructions:**
 
 <p align="justify">
+
 - The project must be written in C (in accordance with the Norm).
 
 - Your functions should not quit unexpectedly (segmentation fault, bus error, double free, etc) apart from undefined behaviors.
