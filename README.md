@@ -33,7 +33,6 @@
   - [Window handling in MiniLibX](#window-handling-in-minilibx)
   - [Drawing and Displaying Content in MiniLibX](#drawing-and-displaying-content-in-minilibx)
 - [Background Knowledge](#background-knowledge)
-  - [](#)
 - [Tester](#tester)
   - [run\_fdf\_tests.sh](#run_fdf_testssh)
     - [How it works](#how-it-works)
@@ -59,7 +58,7 @@
 
 <p align="justify">
 
-The FDF project is a 3D Wireframe Viewer. It's a software development project that focuses on graphics programming, specifically in the field of rendering. The main goal of the project is to create a simplified 3D graphic representation of a relief landscape.
+The FDF project is a 3D Wireframe Viewer. The program should represent this landscape with a wireframe (also known as "mesh"). This means that it should draw lines between each point and its neighbors to form a grid of polygons (usually triangles or quadrilaterals). It's a software development project that focuses on graphics programming, specifically in the field of rendering. The main goal of the project is to create a simplified 3D graphic representation of a relief landscape.
 The project takes a file as input, which contains a set of coordinates. Each coordinate represents a point in space (X, Y, Z) and corresponds to a pixel on the screen. The X and Y values are the coordinates on the screen, and the Z value will be represented by the color of the pixel.
 The FDF project is written in C, using the miniLibX, a simple graphics library provided for the project. It includes features like rotation, zooming, and changing the color gradient.
 This project is a great opportunity to learn about 3D projections, event-driven programming, and how to use graphics libraries. It's a challenging project that requires a good understanding of mathematics, particularly matrix and vector operations.
@@ -325,7 +324,48 @@ The color parameter is an integer. The displayed color needs to be encoded in th
 
 <p align="justify">
 
-###
+1. **Putting the pixels in their according places**: In the context of the FDF project, you're given a map of points in a file. Each point represents a pixel and has a corresponding x, y, and z (height) coordinate. You need to translate these coordinates into screen coordinates to know where to draw each pixel.
+
+2. **Connecting those coordinates**: Once you've plotted the individual points, the next step is to connect them with lines to form a wireframe model. This involves drawing a line between each pair of adjacent points.
+
+3. **Choosing an algorithm to draw the lines**: There are many algorithms you can use to draw a line between two points on a 2D grid. Two of the most popular ones are the DDA (Digital Differential Analyzer) and Bresenham's line algorithm. Both of these algorithms calculate which pixels in the grid should be highlighted to form a line between the two points. However, they use different techniques to do this, and each has its own advantages and disadvantages.
+
+   - **DDA**: This algorithm uses floating-point arithmetic to calculate the exact positions of the pixels along the line. It's simple and accurate, but can be slow because of the use of floating-point arithmetic.
+
+   - **Bresenham's line algorithm**: This algorithm uses integer arithmetic to approximate the positions of the pixels along the line. It's faster than DDA, but can be less accurate for certain lines because of the approximation.
+
+4. Projections:
+
+   1. **Parallel Projection**: In parallel (or orthographic) projection, lines from each point in the object to the viewer are parallel. This means that the size and shape of the object are preserved, but there's no sense of depth - objects further away don't appear smaller. There are three types of parallel projections:
+
+   - **Frontal (or Orthographic)**: The object is viewed from the front and only the front face is visible.
+   - **Top-down (or Plan)**: The object is viewed from the top and only the top face is visible.
+   - **Side (or Profile)**: The object is viewed from the side and only the side face is visible.
+
+   2. **Conic (or Perspective) Projection**: In conic projection, lines from each point in the object converge at a single point (the viewer's eye). This gives a realistic view with a sense of depth - objects further away appear smaller. However, the size and shape of the object are distorted. There are two types of perspective projections:
+
+   - **One-point perspective**: There's a single vanishing point. This is typically used when the viewer is facing one side of the object directly.
+   - **Two-point perspective**: There are two vanishing points. This is typically used when the viewer is facing the corner of an object.
+
+   3. **Isometric Projection**: Isometric projection is a type of parallel projection where the same scale is used for every axis, resulting in a 3D effect without perspective. Lines are drawn at 30-degree angles, which gives a clear view of all sides and all dimensions are proportionally represented.
+
+5. **Points and Vectors**: In the FDF project, each point in the landscape is represented as a vector in 3D space. A vector is essentially an ordered list of numbers, which in this case are the x, y, and z coordinates of a point. Vectors can be added together and multiplied by scalars (individual numbers), which are operations that you'll use frequently in the FDF project.
+
+6. **Transformations**: Transformations are ways of modifying the points in the landscape. The three basic transformations are:
+
+   - **Translation**: This involves moving the object without changing its orientation or size. In terms of vectors, this means adding a certain amount to the x, y, and z coordinates of each point.
+
+   - **Rotation**: This involves turning the object around the origin. This can be represented as a matrix operation on the vectors. For example, to rotate a point around the origin, you multiply its vector by a rotation matrix. The rotation matrix is determined by the angle of rotation and the axis of rotation.
+
+   - **Scaling**: This involves changing the size of the object without changing its shape or orientation. In terms of vectors, this means multiplying the x, y, and z coordinates of each point by a certain factor.
+
+7. **Matrix Operations**: Many of the operations in the FDF project involve multiplying matrices and vectors. This is a key operation in linear algebra. For example, to apply a transformation to a point, you multiply the matrix representing the transformation by the vector representing the point. Matrix multiplication is associative, which means that the order of multiplication matters. This is important to keep in mind when applying multiple transformations.
+
+8.  **Systems of Equations**: Linear algebra also involves solving systems of linear equations, which can come up in various ways in the FDF project. For example, when you're interpolating between two points to draw a line, you're essentially solving a system of equations to find the points on the line.
+
+In summary, linear algebra provides the mathematical framework for manipulating points and shapes in the FDF project. Understanding the basics of vectors, matrices, and linear transformations can greatly help in implementing the project.
+
+
 
 </p>
 
@@ -418,7 +458,7 @@ If you want to support me:</p>
 
 - [linear algebra](https://en.wikipedia.org/wiki/Linear_algebra)
 
-- []()
+- [Rotations in 3D](https://www.youtube.com/watch?app=desktop&v=wg9bI8-Qx2Q)
 
 <br>
 
