@@ -42,7 +42,6 @@
 - [Support Me](#support-me)
 - [Skills developed](#skills-developed)
 - [Sources](#sources)
-- [License](#license)
 - [Author](#author)
 
 
@@ -480,13 +479,6 @@ If you want to support me:</p>
 
 - [Rotations in 3D](https://www.youtube.com/watch?app=desktop&v=wg9bI8-Qx2Q)
 
-<br>
-
-## License
-<p align="center">
-<a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
-<a href="https://opensource.org/licenses/"><img src="https://img.shields.io/badge/License-GPL%20v3-yellow.svg" alt="GPLv3 License"></a>
-<a href="http://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/license-AGPL-blue.svg" alt="AGPL License"></a>
 <br>
 
 ## Author
