@@ -342,26 +342,36 @@ The color parameter is an integer. The displayed color needs to be encoded in th
    - **Top-down (or Plan)**: The object is viewed from the top and only the top face is visible.
    - **Side (or Profile)**: The object is viewed from the side and only the side face is visible.
 
-   2. **Conic (or Perspective) Projection**: In conic projection, lines from each point in the object converge at a single point (the viewer's eye). This gives a realistic view with a sense of depth - objects further away appear smaller. However, the size and shape of the object are distorted. There are two types of perspective projections:
+   2. **Isometric Projection**: Isometric projection is a type of parallel projection where the same scale is used for every axis, resulting in a 3D effect without perspective. Lines are drawn at 30-degree angles, which gives a clear view of all sides and all dimensions are proportionally represented.
+
+  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/isometric_parallel.png" alt="Isometric and Parallel">
+
+   3. **Conic (or Perspective) Projection**: In conic projection, lines from each point in the object converge at a single point (the viewer's eye). This gives a realistic view with a sense of depth - objects further away appear smaller. However, the size and shape of the object are distorted. There are two types of perspective projections:
 
    - **One-point perspective**: There's a single vanishing point. This is typically used when the viewer is facing one side of the object directly.
    - **Two-point perspective**: There are two vanishing points. This is typically used when the viewer is facing the corner of an object.
 
-   3. **Isometric Projection**: Isometric projection is a type of parallel projection where the same scale is used for every axis, resulting in a 3D effect without perspective. Lines are drawn at 30-degree angles, which gives a clear view of all sides and all dimensions are proportionally represented.
+  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/Perspective.png" alt="Perspective">
 
-5. **Points and Vectors**: In the FDF project, each point in the landscape is represented as a vector in 3D space. A vector is essentially an ordered list of numbers, which in this case are the x, y, and z coordinates of a point. Vectors can be added together and multiplied by scalars (individual numbers), which are operations that you'll use frequently in the FDF project.
+1. **Points and Vectors**: In the FDF project, each point in the landscape is represented as a vector in 3D space. A vector is essentially an ordered list of numbers, which in this case are the x, y, and z coordinates of a point. Vectors can be added together and multiplied by scalars (individual numbers), which are operations that you'll use frequently in the FDF project.
 
-6. **Transformations**: Transformations are ways of modifying the points in the landscape. The three basic transformations are:
+2. **Transformations**: Transformations are ways of modifying the points in the landscape. The three basic transformations are:
 
    - **Translation**: This involves moving the object without changing its orientation or size. In terms of vectors, this means adding a certain amount to the x, y, and z coordinates of each point.
 
+    <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/3d-translation.png" alt="3D Translation">
+
    - **Rotation**: This involves turning the object around the origin. This can be represented as a matrix operation on the vectors. For example, to rotate a point around the origin, you multiply its vector by a rotation matrix. The rotation matrix is determined by the angle of rotation and the axis of rotation.
+
+  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/elementary-rotations.png" alt="Elementary Rotations">
 
    - **Scaling**: This involves changing the size of the object without changing its shape or orientation. In terms of vectors, this means multiplying the x, y, and z coordinates of each point by a certain factor.
 
-7. **Matrix Operations**: Many of the operations in the FDF project involve multiplying matrices and vectors. This is a key operation in linear algebra. For example, to apply a transformation to a point, you multiply the matrix representing the transformation by the vector representing the point. Matrix multiplication is associative, which means that the order of multiplication matters. This is important to keep in mind when applying multiple transformations.
+  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/scaling.png" alt="Scaling">
 
-8.  **Systems of Equations**: Linear algebra also involves solving systems of linear equations, which can come up in various ways in the FDF project. For example, when you're interpolating between two points to draw a line, you're essentially solving a system of equations to find the points on the line.
+1. **Matrix Operations**: Many of the operations in the FDF project involve multiplying matrices and vectors. This is a key operation in linear algebra. For example, to apply a transformation to a point, you multiply the matrix representing the transformation by the vector representing the point. Matrix multiplication is associative, which means that the order of multiplication matters. This is important to keep in mind when applying multiple transformations.
+
+2.  **Systems of Equations**: Linear algebra also involves solving systems of linear equations, which can come up in various ways in the FDF project. For example, when you're interpolating between two points to draw a line, you're essentially solving a system of equations to find the points on the line.
 
 In summary, linear algebra provides the mathematical framework for manipulating points and shapes in the FDF project. Understanding the basics of vectors, matrices, and linear transformations can greatly help in implementing the project.
 
