@@ -317,7 +317,7 @@ The `mlx_clear_window` and `mlx_destroy_window` functions currently do not retur
 
 In both functions, it is impossible to display anything outside the specified window, nor display in another window in front of the selected one.
 
-The color parameter is an integer. The displayed color needs to be encoded in this integer, following a defined scheme. All displayable colors can be split into 3 basic colors: red, green, and blue. These three values, in the 0-255 range, represent how much of each color is mixed up to create the original color. These three values must be set inside the integer to display the right color. The three least significant bytes of this integer are filled as shown in the picture in the manual.
+The color parameter is an integer. The displayed color needs to be encoded in this integer, following a defined scheme. All displayable colors can be split into 3 basic colors: red, green, and blue. These three values, in the 0-255 range, represent how much of each color is mixed up to create the original color. These three values must be set inside the integer to display the right color.
 
 </p>
 
