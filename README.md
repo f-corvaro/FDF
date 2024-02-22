@@ -334,7 +334,7 @@ The color parameter is an integer. The displayed color needs to be encoded in th
 
    - **Bresenham's line algorithm**: This algorithm uses integer arithmetic to approximate the positions of the pixels along the line. It's faster than DDA, but can be less accurate for certain lines because of the approximation.
 
-4. Projections:
+4. **Projections**:
 
    1. **Parallel Projection**: In parallel (or orthographic) projection, lines from each point in the object to the viewer are parallel. This means that the size and shape of the object are preserved, but there's no sense of depth - objects further away don't appear smaller. There are three types of parallel projections:
 
