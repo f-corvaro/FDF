@@ -354,7 +354,7 @@ The color parameter is an integer. The displayed color needs to be encoded in th
    - **Two-point perspective**: There are two vanishing points. This is typically used when the viewer is facing the corner of an object.
 
 <p align="center">
-  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/Perspective.png" alt="Perspective" width="75%" height="75%">
+  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/Perspective.png" alt="Perspective" width="50%" height="50%">
 </p>
 
 5. **Points and Vectors**: In the FDF project, each point in the landscape is represented as a vector in 3D space. A vector is essentially an ordered list of numbers, which in this case are the x, y, and z coordinates of a point. Vectors can be added together and multiplied by scalars (individual numbers), which are operations that you'll use frequently in the FDF project.
