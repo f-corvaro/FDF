@@ -19,20 +19,32 @@
 
 <h3 align="center">Index</h3>
 
-<p align="center">
-  <a href="#folder-structure">1 - Folder Structure</a><br>
-  <a href="#about">2 - About</a><br>
-<a href="#provided-resources-and-library-differences">3 - Provided Resources and Library Differences</a><br>
-  <a href="#bonus-part">4 - Bonus Part</a><br>
-  <a href="#tester">5 - Tester</a><br>
-  <a href="#evaluation">6 - Evaluation</a><br>
-  <a href="#correction-sheet">7 - Correction Sheet</a><br>
-  <a href="#support-me">8 - Support Me</a><br>
-  <a href="#skills-developed">9 - Skills Developed</a><br>
-  <a href="#sources">10 - Sources</a><br>
-  <a href="#license">11 - License</a><br>
-  <a href="#author">12 - Author</a><br>
-</p>
+- [Folder Structure](#folder-structure)
+- [About](#about)
+- [Provided Resources and Library Differences](#provided-resources-and-library-differences)
+- [Bonus Part](#bonus-part)
+- [MiniLibX](#minilibx)
+  - [Setting Up MiniLibX](#setting-up-minilibx)
+  - [Understanding MiniLibX](#understanding-minilibx)
+  - [Including MiniLibX in Your Project](#including-minilibx-in-your-project)
+  - [Getting Started with MiniLibX](#getting-started-with-minilibx)
+  - [Image Manipulation with MiniLibX](#image-manipulation-with-minilibx)
+  - [Event Handling in MiniLibX](#event-handling-in-minilibx)
+  - [Window handling in MiniLibX](#window-handling-in-minilibx)
+  - [Drawing and Displaying Content in MiniLibX](#drawing-and-displaying-content-in-minilibx)
+- [Background Knowledge](#background-knowledge)
+  - [](#)
+- [Tester](#tester)
+  - [run\_fdf\_tests.sh](#run_fdf_testssh)
+    - [How it works](#how-it-works)
+  - [Usage](#usage)
+- [Evaluation](#evaluation)
+  - [Correction sheet](#correction-sheet)
+- [Support Me](#support-me)
+- [Skills developed](#skills-developed)
+- [Sources](#sources)
+- [License](#license)
+- [Author](#author)
 
 
 ## Folder Structure
@@ -108,6 +120,8 @@ YOU coded.
 
 **What does it do the program?**
 
+<p align="justify">
+
 The program has to represent the model in isometric projection. The coordinates of the landscape are stored in a .fdf file passed as a parameter to your program. An example is:
 
 ```
@@ -130,7 +144,11 @@ The program has to represent the model in isometric projection. The coordinates 
 
 You need to use the right functions to be able to read data from the file in a quick and simple way. The program should not crash when run the maps.
 
+</p>
+
 **Graphic Management**
+
+<p align="justify">
 
 - The program has to display the image in a window.
 
@@ -142,6 +160,8 @@ You need to use the right functions to be able to read data from the file in a q
 
 - Clicking on the cross on the window’s frame must close the window and quit the program in a clean way.
 
+</p>
+
 ## Provided Resources and Library Differences
 
 [macOS v.](https://github.com/f-corvaro/FDF/tree/main/rescources_macos)
@@ -150,6 +170,8 @@ You need to use the right functions to be able to read data from the file in a q
 
 [maps](https://github.com/f-corvaro/FDF/tree/main/maps)
 
+<p align="justify">
+
 You can find the resources provided by my 42School for this project in both folders. These resources include:
 - The maps;
 - A binary file to test the maps;
@@ -157,7 +179,11 @@ You can find the resources provided by my 42School for this project in both fold
 
 The macOS version includes files with the *.m extension in the folder. The Linux version doesn't have these *.m files as Linux doesn't natively support Objective-C. Instead, it uses C files for the implementation. This is one of the main differences between the two versions of the library.
 
+</p>
+
 ## Bonus Part
+
+<p align="justify">
 
 You will get some extra points if you can:
 
@@ -167,8 +193,13 @@ You will get some extra points if you can:
 - Rotate your model.
 - Add one more bonus of your choice.
 
+</p>
+
 ## MiniLibX
 
+### Setting Up MiniLibX
+
+<p align="justify">
 
 First of all, you need to choose the version suitable for your system. Secondly, extract the library and rename it to ```mlx``` for macOS and to ```mlx_linux``` for Linux.
 
@@ -191,6 +222,112 @@ configure [info] : Execute "make all" from file "test/makefile.gen"
 gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
 gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
 ```
+
+</p>
+
+### Understanding MiniLibX
+
+<p align="justify">
+
+MiniLibX is a simple X-Window interface library designed for students. It provides an easy way to create graphical software without needing any X-Window programming knowledge. The library offers simple window creation, a drawing tool, image management, and basic event handling.
+
+The X-Window system is a network-oriented graphical system for Unix. It consists of two main parts: your software that wants to draw something on the screen and/or get keyboard & mouse inputs, and the X-Server that manages the screen, keyboard, and mouse. A network connection must be established between these two entities to send drawing orders and keyboard/mouse events.
+
+</p>
+
+### Including MiniLibX in Your Project
+
+<p align="justify">
+
+To use MiniLibX, you need to include the `mlx.h` header file. This file only contains function prototypes, and no structure is needed. To use MiniLibX functions, you need to link your software with several libraries, including the MiniLibX library itself.
+
+</p>
+
+### Getting Started with MiniLibX
+
+<p align="justify">
+
+Before using other MiniLibX functions, you need to initialize the connection between your software and the display using the `mlx_init` function. This function takes no parameters and returns a `void *` identifier, which is used for further calls to the library routines.
+
+Other MiniLibX functions include `mlx_new_window` for managing windows, `mlx_pixel_put` for drawing inside a window, `mlx_new_image` for manipulating images, and `mlx_loop` for handling keyboard or mouse events.
+
+If `mlx_init()` fails to set up the connection to the X server, it will return NULL. Otherwise, it returns a non-null pointer as a connection identifier.
+
+</p>
+
+### Image Manipulation with MiniLibX
+
+<p align="justify">
+
+- `mlx_new_image`: This function creates a new image in memory. It requires the size of the image to be created and the connection identifier. The function returns a void pointer that is used to manipulate the image later.
+
+- `mlx_put_image_to_window`: This function displays an image on the screen. It requires identifiers for the connection to the display, the window to use, and the image. It also needs the coordinates where the image should be placed in the window.
+
+- `mlx_get_data_addr`: This function returns information about the created image, allowing a user to modify it later. It requires the image pointer and the addresses of three different valid integers. It returns a char pointer that represents the beginning of the memory area where the image is stored.
+
+- `mlx_destroy_image`: This function destroys the given image.
+
+- `mlx_get_color_value`: This function translates a standard RGB color parameter to fit the bits_per_pixel requirement of the image, and make the color understandable to the X-Server.
+
+- `mlx_xpm_to_image` and `mlx_xpm_file_to_image`: These functions create a new image and fill it using the specified xpm_data or filename. They handle transparency but may not be able to read all types of xpm images.
+
+The three functions that create images, `mlx_new_image`, `mlx_xpm_to_image`, and `mlx_xpm_file_to_image`, will return NULL if an error occurs. Otherwise, they return a non-null pointer as an image identifier.
+
+</p>
+
+### Event Handling in MiniLibX
+
+<p align="justify">
+
+- `mlx_loop`: This function is an infinite loop that waits for an event and then calls a user-defined function associated with this event. It requires the connection identifier.
+
+- `mlx_key_hook`, `mlx_mouse_hook`, `mlx_expose_hook`: These functions assign user-defined functions to specific events (key press, mouse button press, and window expose respectively). They require the window identifier, a pointer to the function to be called when the event occurs, and a parameter that will be passed to the function every time it is called.
+
+- `mlx_loop_hook`: This function assigns a user-defined function that will be called when no event occurs. It requires the connection identifier, a pointer to the function to be called, and a parameter that will be passed to the function.
+
+When an event occurs, MiniLibX calls the corresponding function with fixed parameters. For key and mouse events, additional information is passed, such as the keycode for the key that was pressed, the coordinates of the mouse click in the window, and which mouse button was pressed.
+
+The MiniLibX also provides a more generic access to all X-Window events through the `mlx_hook` function. The event and mask values will be taken from the X11 include file "X.h".
+
+</p>
+
+### Window handling in MiniLibX
+
+<p align="justify">
+
+- `mlx_new_window`: This function creates a new window on the screen. It requires the connection identifier, the size of the window, and the title of the window. The function returns a void pointer that is used as a window identifier for other MiniLibX calls.
+
+- `mlx_clear_window`: This function clears the given window (fills it with black). It requires the connection identifier and the window identifier.
+
+- `mlx_destroy_window`: This function destroys the given window. It requires the same parameters as `mlx_clear_window`.
+
+The `mlx_new_window` function can handle an arbitrary number of separate windows. If it fails to create a new window for any reason, it will return NULL. Otherwise, it returns a non-null pointer as a window identifier.
+
+The `mlx_clear_window` and `mlx_destroy_window` functions currently do not return anything.
+
+</p>
+
+### Drawing and Displaying Content in MiniLibX
+
+<p align="justify">
+
+- `mlx_pixel_put`: This function draws a pixel in the window at the specified coordinates and color. The origin (0,0) is the upper left corner of the window, with the x and y axis pointing right and down respectively. The function requires the connection identifier, the window identifier, the coordinates, and the color.
+
+- `mlx_string_put`: This function displays a string at the specified coordinates and color in the window. The parameters have the same meaning as for `mlx_pixel_put`. Instead of a pixel, the specified string will be displayed.
+
+In both functions, it is impossible to display anything outside the specified window, nor display in another window in front of the selected one.
+
+The color parameter is an integer. The displayed color needs to be encoded in this integer, following a defined scheme. All displayable colors can be split into 3 basic colors: red, green, and blue. These three values, in the 0-255 range, represent how much of each color is mixed up to create the original color. These three values must be set inside the integer to display the right color. The three least significant bytes of this integer are filled as shown in the picture in the manual.
+
+</p>
+
+## Background Knowledge
+
+<p align="justify">
+
+###
+
+</p>
 
 ## Tester
 
@@ -274,6 +411,14 @@ If you want to support me:</p>
 ## Sources
 
 - [minilibx doc](https://harm-smits.github.io/42docs/libs/minilibx)
+
+- [Fdf explained (42 ecole project)](https://www.youtube.com/watch?v=QVobB3pZoIY)
+
+- [Fil de Fer(Fdf)](https://m4nnb3ll.medium.com/fil-de-fer-fdf-the-first-graphical-project-at-42-the-network-5cce69203448)
+
+- [linear algebra](https://en.wikipedia.org/wiki/Linear_algebra)
+
+- []()
 
 <br>
 
