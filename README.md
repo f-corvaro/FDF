@@ -1,4 +1,4 @@
-<h1 align="center">FDF - In developtment</h1>
+<h1 align="center">FDF</h1>
 
 <p align="center">
   <a href="https://github.com/f-corvaro/FDF">
