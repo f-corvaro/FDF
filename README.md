@@ -50,6 +50,143 @@
 <p align="justify">
 
 ```
+.
+├── fdf
+│   ├── include
+│   │   ├── linux
+│   │   │   ├── color_config.h
+│   │   │   ├── error_msg.h
+│   │   │   ├── functions.h
+│   │   │   ├── key_bindings_config.h
+│   │   │   ├── movements_config.h
+│   │   │   ├── resolution_settings_config.h
+│   │   │   └── structure.h
+│   │   ├── macOS
+│   │   │   ├── color_config.h
+│   │   │   ├── error_msg.h
+│   │   │   ├── functions.h
+│   │   │   ├── key_bindings_config.h
+│   │   │   ├── movements_config.h
+│   │   │   ├── resolution_settings_config.h
+│   │   │   └── structure.h
+│   │   └── fdf.h
+│   ├── lib
+│   │   ├── fcorvaro_lib
+│   │   ├── mlx_linux
+│   │   └── mlx_macos
+│   ├── maps
+│   │   ├── 10-2.fdf
+│   │   ├── 10-70.fdf
+│   │   ├── 100-6.fdf
+│   │   ├── 20-60.fdf
+│   │   ├── 42.fdf
+│   │   ├── 50-4.fdf
+│   │   ├── basictest.fdf
+│   │   ├── elem-col.fdf
+│   │   ├── elem-fract.fdf
+│   │   ├── elem.fdf
+│   │   ├── elem2.fdf
+│   │   ├── julia.fdf
+│   │   ├── mars.fdf
+│   │   ├── pentenegpos.fdf
+│   │   ├── plat.fdf
+│   │   ├── pnp_flat.fdf
+│   │   ├── pylone.fdf
+│   │   ├── pyra.fdf
+│   │   ├── pyramide.fdf
+│   │   ├── t1.fdf
+│   │   └── t2.fdf
+│   ├── srcs_linux
+│   │   ├── color
+│   │   │   ├── color_calculation.c
+│   │   │   └── color_parsing.c
+│   │   ├── errors
+│   │   │   └── handling.c
+│   │   ├── input
+│   │   │   ├── height_handling.c
+│   │   │   ├── key.c
+│   │   │   ├── rotation.c
+│   │   │   ├── translation.c
+│   │   │   └── zoom.c
+│   │   ├── maps
+│   │   │   ├── filling.c
+│   │   │   ├── init.c
+│   │   │   ├── parse_file.c
+│   │   │   └── statistics.c
+│   │   ├── math
+│   │   │   ├── atoi_base.c
+│   │   │   ├── bresenham_algorithm.c
+│   │   │   ├── isometric_conversion.c
+│   │   │   ├── rotation.c
+│   │   │   └── utils.c
+│   │   ├── memory_management
+│   │   │   ├── map.c
+│   │   │   ├── memory_management.c
+│   │   │   └── window_management.c
+│   │   ├── mlx_handling
+│   │   │   └── utils.c
+│   │   ├── points_operations
+│   │   │   ├── creation.c
+│   │   │   └── trasformation.c
+│   │   ├── rendering
+│   │   │   ├── draw.c
+│   │   │   ├── image_handling.c
+│   │   │   └── menu.c
+│   │   ├── vars_management
+│   │   │   └── utils.c
+│   │   └── main.c
+│   ├── srcs_macos
+│   │   ├── color
+│   │   │   ├── color_calculation.c
+│   │   │   └── color_parsing.c
+│   │   ├── errors
+│   │   │   └── handling.c
+│   │   ├── input
+│   │   │   ├── height_handling.c
+│   │   │   ├── key.c
+│   │   │   ├── rotation.c
+│   │   │   ├── translation.c
+│   │   │   └── zoom.c
+│   │   ├── maps
+│   │   │   ├── filling.c
+│   │   │   ├── init.c
+│   │   │   ├── parse_file.c
+│   │   │   └── statistics.c
+│   │   ├── math
+│   │   │   ├── atoi_base.c
+│   │   │   ├── bresenham_algorithm.c
+│   │   │   ├── isometric_conversion.c
+│   │   │   ├── rotation.c
+│   │   │   └── utils.c
+│   │   ├── memory_management
+│   │   │   ├── map.c
+│   │   │   ├── memory_management.c
+│   │   │   └── window_management.c
+│   │   ├── mlx_handling
+│   │   │   └── utils.c
+│   │   ├── points_operations
+│   │   │   ├── creation.c
+│   │   │   └── trasformation.c
+│   │   ├── rendering
+│   │   │   ├── draw.c
+│   │   │   ├── image_handling.c
+│   │   │   └── menu.c
+│   │   ├── vars_management
+│   │   │   └── utils.c
+│   │   └── main.c
+│   └── Makefile
+├── rescources_macos
+│   ├── fdf
+│   ├── minilibx_macos_sierra_20161017.tgz
+│   └── minilibx_mms_20191025_beta.tgz
+├── resources_linux
+│   ├── fdf_linux
+│   ├── minilibx-linux.tgz
+│   └── sources.tgz
+├── LICENSE
+├── README.md
+└── run_fdf_tests.sh
+
 ```
 </p>
 
