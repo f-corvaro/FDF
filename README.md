@@ -23,6 +23,7 @@
 - [About](#about)
 - [Provided Resources and Library Differences](#provided-resources-and-library-differences)
 - [Bonus Part](#bonus-part)
+- [Overview](#overview)
 - [MiniLibX](#minilibx)
   - [Setting Up MiniLibX](#setting-up-minilibx)
   - [Understanding MiniLibX](#understanding-minilibx)
@@ -35,7 +36,6 @@
 - [Background Knowledge](#background-knowledge)
 - [Tester](#tester)
   - [run\_fdf\_tests.sh](#run_fdf_testssh)
-    - [How it works](#how-it-works)
   - [Usage](#usage)
 - [Evaluation](#evaluation)
   - [Correction sheet](#correction-sheet)
@@ -331,6 +331,14 @@ You will get some extra points if you can:
 
 </p>
 
+## Overview
+
+<p align="justify">
+
+
+
+</p>
+
 ## MiniLibX
 
 ### Setting Up MiniLibX
@@ -534,29 +542,15 @@ In summary, linear algebra provides the mathematical framework for manipulating 
 
 <p align="justify">
 
-This script is used to run tests on the `fdf` program with various map files.
+The `run_fdf_tests.sh` script is a testing tool for the FDF project. It's designed to automate the process of running the FDF program with various map files and checking for memory leaks. 
 
-</p>
+When executed, the script prompts the user to enter the directory path where the map files are located. If no path is provided, it defaults to a `./maps` directory.
 
-#### How it works
+The script identifies the operating system it's running on and uses the appropriate tool to check for memory leaks. On Linux, it uses `valgrind`, and on macOS (Darwin), it uses the `leaks` command. 
 
-<p align="justify">
+For each map file in the specified directory, the script runs the FDF program, checks for memory leaks, and displays the results. It also provides a progress update, indicating which map is currently being processed and how many maps are left.
 
-**Before running this script, ensure that it is placed in the same directory as your `fdf` program. Also, make sure to run `make all` or `make bonus` in your `fdf` directory to compile all necessary files. You have the option to utilize either standard or custom maps for testing your program.**
-
-1. The script asks the user to enter the path to the directory containing the map files. If the user doesn't provide a path, it defaults to `./maps`.
-
-2. The script determines the operating system it's running on. This is used later to decide which command to use for checking for memory leaks.
-
-3. The script counts the total number of map files in the directory.
-
-4. The script then enters a loop where it processes each map file one by one.
-
-5. For each map file, it prints a message indicating which map is currently being processed and how many maps are left.
-
-6. If the operating system is Linux, it uses `valgrind` to check for memory leaks. If the operating system is macOS, it uses the `leaks` command.
-
-7. After processing each map file, it pauses and waits for the user to press enter before continuing to the next map file. This pause is added so that the user can take the time to inspect the output for any memory leaks in detail.
+Please note that using this script may slow down the performance of the FDF program. This is not a problem with the FDF program itself, but a side effect of the memory leak checks. These checks involve monitoring the program's memory usage in detail, which can be a resource-intensive process.
 
 </p>
 
@@ -564,7 +558,7 @@ This script is used to run tests on the `fdf` program with various map files.
 
 <p align="justify">
 
-To run the script, navigate to the directory containing the script and run the following command:
+You need to store the script into fdf folder and run the script:
 
 ```shellscript
 bash run_fdf_tests.sh
