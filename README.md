@@ -196,7 +196,7 @@
 
 The FDF project is a 3D Wireframe Viewer. The program should represent this landscape with a wireframe (also known as "mesh"). This means that it should draw lines between each point and its neighbors to form a grid of polygons (usually triangles or quadrilaterals). It's a software development project that focuses on graphics programming, specifically in the field of rendering. The main goal of the project is to create a simplified 3D graphic representation of a relief landscape.
 The project takes a file as input, which contains a set of coordinates. Each coordinate represents a point in space (X, Y, Z) and corresponds to a pixel on the screen. The X and Y values are the coordinates on the screen, and the Z value will be represented by the color of the pixel.
-The FDF project is written in C, using the miniLibX, a simple graphics library provided for the project. It includes features like rotation, zooming, and changing the color gradient.
+The FDF project is written in C, using the miniLibX, a simple graphics library provided for the project. 
 This project is a great opportunity to learn about 3D projections, event-driven programming, and how to use graphics libraries. It's a challenging project that requires a good understanding of mathematics, particularly matrix and vector operations.
 Please note that the FDF project is part of the graphics branch of the 42 School curriculum. It's a great way to dive into graphics programming and start building more complex projects.
 
@@ -234,7 +234,7 @@ the subject does not specify anything else.
 **Syntax of the program**
 
 ```bash
-./fdf *.fdf
+./fdf map_name.fdf
 ```
 **External functs. allowed**
 
@@ -278,6 +278,7 @@ The program has to represent the model in isometric projection. The coordinates 
 - The value corresponds to its altitude.
 
 You need to use the right functions to be able to read data from the file in a quick and simple way. The program should not crash when run the maps.
+You can find all the maps given from the school [here](https://github.com/f-corvaro/FDF/tree/main/fdf/maps).
 
 </p>
 
@@ -291,7 +292,7 @@ You need to use the right functions to be able to read data from the file in a q
 
 - Pressing ESC must close the window and quit the program in a clean way.
 
-- The use of the images of the MiniLibX is mandatory
+- The use of the images of the MiniLibX is MANDATORY. In order to verify that the student is correctly using the images from the MiniLibX library in their FDF project, you need to identify the files where the drawing functions are implemented and look for MiniLibX library function.
 
 - Clicking on the cross on the window’s frame must close the window and quit the program in a clean way.
 
@@ -303,13 +304,13 @@ You need to use the right functions to be able to read data from the file in a q
 
 [linux v.](https://github.com/f-corvaro/FDF/tree/main/resources_linux)
 
-[maps](https://github.com/f-corvaro/FDF/tree/main/maps)
+[maps](https://github.com/f-corvaro/FDF/tree/main/fdf/maps)
 
 <p align="justify">
 
 You can find the resources provided by my 42School for this project in both folders. These resources include:
 - The maps;
-- A binary file to test the maps;
+- A binary file for testing the maps, one tailored for each operating system;
 - Different versions of the MinilibX library: I would use the Sierra version for macOS and the MinilibX-Linux for Linux.
 
 The macOS version includes files with the *.m extension in the folder. The Linux version doesn't have these *.m files as Linux doesn't natively support Objective-C. Instead, it uses C files for the implementation. This is one of the main differences between the two versions of the library.
@@ -357,6 +358,8 @@ configure [info] : Execute "make all" from file "test/makefile.gen"
 gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
 gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
 ```
+
+The MLX library requires the use of the `make all` command; it does not work with the `make` command alone.
 
 </p>
 
@@ -466,9 +469,11 @@ The color parameter is an integer. The displayed color needs to be encoded in th
 
 3. **Choosing an algorithm to draw the lines**: There are many algorithms you can use to draw a line between two points on a 2D grid. Two of the most popular ones are the DDA (Digital Differential Analyzer) and Bresenham's line algorithm. Both of these algorithms calculate which pixels in the grid should be highlighted to form a line between the two points. However, they use different techniques to do this, and each has its own advantages and disadvantages.
 
-   - **DDA**: This algorithm uses floating-point arithmetic to calculate the exact positions of the pixels along the line. It's simple and accurate, but can be slow because of the use of floating-point arithmetic.
+- **DDA (Digital Differential Analyzer)**: The DDA algorithm is a scan-conversion method for drawing a line which uses simple arithmetic. The concept behind the algorithm is to take the difference in the x-coordinates and y-coordinates, and then divide the difference by the number of steps needed to draw the line. The algorithm uses floating-point arithmetic to calculate the exact positions of the pixels along the line, which makes it highly accurate. However, the use of floating-point arithmetic can make the DDA algorithm slower than other line drawing algorithms, especially on hardware that doesn't handle floating-point operations efficiently.
 
-   - **Bresenham's line algorithm**: This algorithm uses integer arithmetic to approximate the positions of the pixels along the line. It's faster than DDA, but can be less accurate for certain lines because of the approximation.
+- **Bresenham's Line Algorithm**: Bresenham's line algorithm is an efficient method for drawing a line as it only uses integer arithmetic. The algorithm determines the points of an n-dimensional raster that should be selected in order to form a close approximation to a straight line between two given points. It's generally faster than the DDA algorithm because it avoids the use of floating-point arithmetic. However, because it uses approximation to determine which pixels to illuminate, it can be less accurate than the DDA algorithm for certain lines.
+
+Both algorithms have their uses and are chosen based on the requirements of the application. If precision is a priority, the DDA algorithm is a better choice. If speed is more important, Bresenham's line algorithm is typically the preferred option.
 
 4. **Projections**:
 
@@ -520,8 +525,6 @@ The color parameter is an integer. The displayed color needs to be encoded in th
 8.  **Systems of Equations**: Linear algebra also involves solving systems of linear equations, which can come up in various ways in the FDF project. For example, when you're interpolating between two points to draw a line, you're essentially solving a system of equations to find the points on the line.
 
 In summary, linear algebra provides the mathematical framework for manipulating points and shapes in the FDF project. Understanding the basics of vectors, matrices, and linear transformations can greatly help in implementing the project.
-
-
 
 </p>
 
