@@ -1,10 +1,6 @@
-<h1 align="center">FDF</h1>
-
-<p align="center">
-  <a href="https://github.com/f-corvaro/FDF">
+<h1 align="center"><a href="https://github.com/f-corvaro/FDF">
 	<img src="https://github.com/f-corvaro/FDF/blob/main/.extra/FDF.png" alt="fdf">
-  </a>
-</p>
+  </a></h1>
 
 <p align="center">
 	<b><i>"Navigate the third dimension with FDF, your toolkit for wireframe modeling."</i></b><br>
