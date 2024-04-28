@@ -15,31 +15,35 @@
 
 <h3 align="center">Index</h3>
 
-- [Folder Structure](#folder-structure)
-- [About](#about)
-- [Provided Resources and Library Differences](#provided-resources-and-library-differences)
-- [Bonus Part](#bonus-part)
-- [Overview](#overview)
-- [MiniLibX](#minilibx)
-  - [Setting Up MiniLibX](#setting-up-minilibx)
-  - [Understanding MiniLibX](#understanding-minilibx)
-  - [Including MiniLibX in Your Project](#including-minilibx-in-your-project)
-  - [Getting Started with MiniLibX](#getting-started-with-minilibx)
-  - [Image Manipulation with MiniLibX](#image-manipulation-with-minilibx)
-  - [Event Handling in MiniLibX](#event-handling-in-minilibx)
-  - [Window handling in MiniLibX](#window-handling-in-minilibx)
-  - [Drawing and Displaying Content in MiniLibX](#drawing-and-displaying-content-in-minilibx)
-- [Background Knowledge](#background-knowledge)
-- [Tester](#tester)
-  - [run\_fdf\_tests.sh](#run_fdf_testssh)
-  - [Usage](#usage)
-- [Evaluation](#evaluation)
-  - [Correction sheet](#correction-sheet)
-- [Support Me](#support-me)
-- [Skills developed](#skills-developed)
-- [Sources](#sources)
-- [Author](#author)
+<div align="center">
 
+[Folder Structure](#folder-structure)  
+[About](#about)  
+[Provided Resources and Library Differences](#provided-resources-and-library-differences)  
+[Bonus Part](#bonus-part)  
+[Overview](#overview)  
+[MiniLibX](#minilibx)  
+  [Setting Up MiniLibX](#setting-up-minilibx)  
+  [Understanding MiniLibX](#understanding-minilibx)  
+  [Including MiniLibX in Your Project](#including-minilibx-in-your-project)  
+  [Getting Started with MiniLibX](#getting-started-with-minilibx)  
+  [Image Manipulation with MiniLibX](#image-manipulation-with-minilibx)  
+  [Event Handling in MiniLibX](#event-handling-in-minilibx)  
+  [Window handling in MiniLibX](#window-handling-in-minilibx)  
+  [Drawing and Displaying Content in MiniLibX](#drawing-and-displaying-content-in-minilibx)  
+[Background Knowledge](#background-knowledge)  
+[Tester](#tester)  
+  [run\_fdf\_tests.sh](#run_fdf_testssh)  
+  [Usage](#usage)  
+[Evaluation](#evaluation)  
+  [Correction sheet](#correction-sheet)  
+[Support Me](#support-me)  
+[Skills developed](#skills-developed)  
+[Sources](#sources)  
+[Author](#author)
+
+</div>
+<br>
 
 ## Folder Structure
 
