@@ -14,36 +14,98 @@
 </p>
 
 <h3 align="center">Index</h3>
-
-<div align="center">
-
-[Folder Structure](#folder-structure)  
-[About](#about)  
-[Provided Resources and Library Differences](#provided-resources-and-library-differences)  
-[Bonus Part](#bonus-part)  
-[Overview](#overview)  
-[MiniLibX](#minilibx)  
-  [Setting Up MiniLibX](#setting-up-minilibx)  
-  [Understanding MiniLibX](#understanding-minilibx)  
-  [Including MiniLibX in Your Project](#including-minilibx-in-your-project)  
-  [Getting Started with MiniLibX](#getting-started-with-minilibx)  
-  [Image Manipulation with MiniLibX](#image-manipulation-with-minilibx)  
-  [Event Handling in MiniLibX](#event-handling-in-minilibx)  
-  [Window handling in MiniLibX](#window-handling-in-minilibx)  
-  [Drawing and Displaying Content in MiniLibX](#drawing-and-displaying-content-in-minilibx)  
-[Background Knowledge](#background-knowledge)  
-[Tester](#tester)  
-  [run\_fdf\_tests.sh](#run_fdf_testssh)  
-  [Usage](#usage)  
-[Evaluation](#evaluation)  
-  [Correction sheet](#correction-sheet)  
-[Support Me](#support-me)  
-[Skills developed](#skills-developed)  
-[Sources](#sources)  
-[Author](#author)
-
-</div>
+<p align="center">
+ <a href="#introduction">Introduction</a><br>
+ <a href="#overview">Overview</a><br>
+ <a href="#visual-overview">Visual Overview</a><br>
+ <a href="#demonstration">Demonstration</a><br>
+ <a href="#key-bindings">Key Bindings</a><br>
+ <a href="#screenshots">Screenshots</a><br>
+ <a href="#folder-structure">Folder Structure</a><br>
+ <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
+ <a href="#important-guidelines">Important Guidelines</a><br>
+ <a href="#window-and-graphics-management">Window and Graphics Management</a><br>
+ <a href="#program-name">Program Name</a><br>
+ <a href="#usage">Usage</a><br>
+ <a href="#overview-1">Overview</a><br>
+ <a href="#files-to-submit">Files to Submit</a><br>
+ <a href="#allowed-external-functions">Allowed External Functions</a><br>
+ <a href="#provided-resources">Provided Resources</a><br>
+ <a href="#project-requirements---bonus-part">Project Requirements - Bonus Part</a><br>
+ <a href="#minilibx-library">MiniLibX Library</a><br>
+ <a href="#getting-started-with-minilibx">Getting Started with MiniLibX</a><br>
+ <a href="#setting-up-minilibx">Setting Up MiniLibX</a><br>
+ <a href="#including-minilibx-in-your-project">Including MiniLibX in Your Project</a><br>
+ <a href="#introduction-to-minilibx">Introduction to MiniLibX</a><br>
+ <a href="#manipulating-images-with-minilibx">Manipulating Images with MiniLibX</a><br>
+ <a href="#event-handling-in-minilibx">Event Handling in MiniLibX</a><br>
+ <a href="#window-handling-in-minilibx">Window Handling in MiniLibX</a><br>
+ <a href="#drawing-and-displaying-content-in-minilibx">Drawing and Displaying Content in MiniLibX</a><br>
+ <a href="#theoretical-background">Theoretical Background</a><br>
+ <a href="#automated-testing-for-the-fdf-project">Automated Testing for the FDF Project</a><br>
+ <a href="#run_fdf_testssh-script">`run_fdf_tests.sh` Script</a><br>
+ <a href="#usage-1">Usage</a><br>
+ <a href="#evaluation-process">Evaluation Process</a><br>
+ <a href="#correction-sheet">Correction Sheet</a><br>
+ <a href="#developed-skills">Developed Skills</a><br>
+ <a href="#references">References</a><br>
+ <a href="#support-and-contributions">Support and Contributions</a><br>
+ <a href="#author">Author</a><br>
+</p>
 <br>
+
+## Introduction
+
+<p align="justify">
+
+The FDF project is a 3D Wireframe Viewer developed as part of the graphics branch of the 42 School curriculum. It is a software development project that focuses on graphics programming, specifically in the field of rendering. The main goal of the project is to create a simplified 3D graphic representation of a relief landscape.
+
+The program takes a file as input, which contains a set of coordinates representing points in space. Each coordinate corresponds to a pixel on the screen, with the X and Y values representing the coordinates on the screen and the Z value determining the color of the pixel.
+
+By connecting the points with lines, the program creates a wireframe mesh that forms a grid of polygons, typically triangles or quadrilaterals. This wireframe representation provides a visual depiction of the landscape.
+
+The FDF project is written in C and utilizes the miniLibX, a simple graphics library provided for the project. It offers a great opportunity to learn about 3D projections, event-driven programming, and the use of graphics libraries. It is a challenging project that requires a good understanding of mathematics, particularly matrix and vector operations.
+
+Overall, the FDF project allows students to delve into the world of graphics programming and develop their skills in rendering and visualization. It serves as a foundation for more complex projects in the field of computer graphics.
+
+</p>
+</br>
+
+### Overview
+
+<p align="justify">
+
+The FDF project is a graphical application written in C that visualizes 3D wireframe models from a set of 2D coordinates. The input to the program is a file containing coordinates that represent points in a 3D space. Each point is defined by X, Y, and Z values, where X and Y correspond to the pixel coordinates on the screen, and Z represents the height or depth, which can be used to determine the color intensity of the pixel.
+
+The core functionality of the FDF project involves reading these coordinates and rendering them as a wireframe mesh on the screen. This mesh is created by connecting the points with lines, forming a grid of polygons, typically triangles or quadrilaterals. The resulting wireframe provides a visual representation of the 3D landscape.
+
+The project leverages the miniLibX, a simple yet powerful graphics library, to handle the rendering and display of the wireframe. MiniLibX provides essential functions for creating windows, drawing pixels, and handling user input, making it an ideal choice for this project.
+
+Key technical aspects of the FDF project include:
+
+- **3D Projections**: Converting 3D coordinates into 2D screen coordinates using various projection techniques.
+- **Matrix and Vector Operations**: Performing transformations such as translation, rotation, and scaling on the set of coordinates.
+- **Event-Driven Programming**: Handling user inputs to interact with the wireframe, such as rotating or zooming the view.
+- **Graphics Rendering**: Efficiently drawing lines and polygons to create the wireframe mesh.
+
+The FDF project is an excellent opportunity to deepen your understanding of computer graphics, mathematical transformations, and event-driven programming. It serves as a foundational project that prepares you for more advanced topics in the field of graphics programming.
+
+</p>
+
+### Visual Overview
+
+#### Demonstration
+
+![Program Overview](https://github.com/f-corvaro/FDF/blob/main/.extra/overview.gif)
+
+#### Key Bindings
+![Key Bindings](https://github.com/f-corvaro/FDF/blob/main/.extra/key.png)
+
+#### Screenshots
+![Screenshot 1](https://github.com/f-corvaro/FDF/blob/main/.extra/screen1.png)
+![Screenshot 2](https://github.com/f-corvaro/FDF/blob/main/.extra/screen2.png)
+
+</p>
 
 ## Folder Structure
 
@@ -186,78 +248,58 @@
 ├── LICENSE
 ├── README.md
 └── run_fdf_tests.sh
-
 ```
 </p>
 
-## About
+## Project Requirements - Mandatory Part
+
+### Important Guidelines:
 
 <p align="justify">
 
-The FDF project is a 3D Wireframe Viewer. The program should represent this landscape with a wireframe (also known as "mesh"). This means that it should draw lines between each point and its neighbors to form a grid of polygons (usually triangles or quadrilaterals). It's a software development project that focuses on graphics programming, specifically in the field of rendering. The main goal of the project is to create a simplified 3D graphic representation of a relief landscape.
-The project takes a file as input, which contains a set of coordinates. Each coordinate represents a point in space (X, Y, Z) and corresponds to a pixel on the screen. The X and Y values are the coordinates on the screen, and the Z value will be represented by the color of the pixel.
-The FDF project is written in C, using the miniLibX, a simple graphics library provided for the project. 
-This project is a great opportunity to learn about 3D projections, event-driven programming, and how to use graphics libraries. It's a challenging project that requires a good understanding of mathematics, particularly matrix and vector operations.
-Please note that the FDF project is part of the graphics branch of the 42 School curriculum. It's a great way to dive into graphics programming and start building more complex projects.
+- The project must be written in C, following the Norm guidelines.
+- Functions should not have unexpected errors, such as segmentation faults or double frees. Avoid undefined behaviors.
+- Properly free all dynamically allocated memory when necessary.
+- Include a Makefile that compiles the source files with the flags -Wall, -Wextra, and -Werror. Use the cc compiler. The Makefile should not relink. It should include the rules $(NAME), all, clean, fclean, and re. Bonus points if additional rules are included.
+- If allowed, use your libft. Copy its sources and Makefile into a libft folder. The project's Makefile should compile the library using its Makefile, and then compile the project.
+- Do not use global variables.
 
 </p>
 
-**Common Instructions:**
+### Window and Graphics Management
 
 <p align="justify">
 
-- The project must be written in C (in accordance with the Norm).
-
-- Your functions should not quit unexpectedly (segmentation fault, bus error, double free, etc) apart from undefined behaviors.
-
-- All heap allocated memory space must be properly freed when necessary.
-
-- You must submit a Makefile which will compile your source files to the required output with the flags -Wall, -Wextra and -Werror, use cc, and your Makefile must not relink. And the Makefile must at least contain the rules $(NAME), all, clean, fclean and re (bonus if you want maximum score).
-
-- Bonuses must be in a different file _bonus.{c/h} if
-the subject does not specify anything else.
-
-- If your project allows you to use your libft, you must copy its sources and its associated Makefile in a libft folder with its associated Makefile. Your project’s Makefile must compile the library by using its Makefile, then compile the project.
-
-- Global variables are forbidden.
+- The program must display the image within a window.
+- The window management should be smooth, allowing for actions such as switching to another window or minimizing without issues.
+- Pressing the ESC key should close the window and terminate the program cleanly.
+- The use of MiniLibX images is mandatory. To ensure proper usage of the MiniLibX library in the FDF project, verify the files where the drawing functions are implemented and check for MiniLibX library functions.
+- Clicking the close button on the window's frame should also close the window and terminate the program cleanly.
 
 </p>
 
-**Program name**
+### Program name
 
-```fdf```
+`fdf`
 
-**Files to turn in**
+#### Usage
 
-```Makefile, *.h, *.c```
+<p align="justify">
 
-**Syntax of the program**
+To run the program, use the following syntax:
 
 ```bash
-./fdf map_name.fdf
+./fdf <map_name.fdf>
 ```
-**External functs. allowed**
+Replace `<map_name.fdf>` with the path to your FDF map file.
 
-- open, close, read, write,
-malloc, free, perror,
-strerror, exit.
+</p>
 
-- All functions of the math
-library (-lm compiler option,
-man man 3 math).
-
-- All functions of the MiniLibX.
-
-- ft_printf and any equivalent
-YOU coded.
-
-**You must use the MiniLibX in the version available on the school machines.**
-
-**What does it do the program?**
+#### Overview
 
 <p align="justify">
 
-The program has to represent the model in isometric projection. The coordinates of the landscape are stored in a .fdf file passed as a parameter to your program. An example is:
+This program generates an isometric projection of a model based on landscape coordinates stored in a `.fdf` file, which is provided as a parameter. Here is how the coordinates are interpreted:
 
 ```
 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
@@ -273,117 +315,110 @@ The program has to represent the model in isometric projection. The coordinates 
 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 ```
 
-- The horizontal position corresponds to its axis.
-- The vertical position corresponds to its ordinate.
-- The value corresponds to its altitude.
+- The horizontal position corresponds to the x-axis.
+- The vertical position corresponds to the y-axis.
+- The value corresponds the altitude (z-axis).
 
-You need to use the right functions to be able to read data from the file in a quick and simple way. The program should not crash when run the maps.
-You can find all the maps given from the school [here](https://github.com/f-corvaro/FDF/tree/main/fdf/maps).
+The program is designed to efficiently read data from the file and should handle all provided maps without crashing. You can find all the maps provided by the school [here](https://github.com/f-corvaro/FDF/tree/main/fdf/maps).
 
 </p>
 
-**Graphic Management**
+### Files to Submit
+
+`Makefile, *.h, *.c`
+
+### Allowed External Functions
 
 <p align="justify">
 
-- The program has to display the image in a window.
+The program requires the following functions and libraries:
 
-- The management of your window must remain smooth (changing to another window, minimizing and so forth).
+- File I/O functions: `open`, `close`, `read`, `write`
+- Memory management functions: `malloc`, `free`
+- Error handling functions: `perror`, `strerror`, `exit`
+- Math library functions: All functions from the math library (-lm compiler option, `man man 3 math`)
+- MiniLibX functions: All functions from the MiniLibX library
+- Custom printf function: `ft_printf` or any equivalent function that you have implemented
 
-- Pressing ESC must close the window and quit the program in a clean way.
+Please note that the program must use the MiniLibX library in the version available on the school machines.
 
-- The use of the images of the MiniLibX is MANDATORY. In order to verify that the student is correctly using the images from the MiniLibX library in their FDF project, you need to identify the files where the drawing functions are implemented and look for MiniLibX library function.
+## Provided Resources
 
-- Clicking on the cross on the window’s frame must close the window and quit the program in a clean way.
+[macOS Resources](https://github.com/f-corvaro/FDF/tree/main/rescources_macos)
 
-</p>
+[Linux Resources](https://github.com/f-corvaro/FDF/tree/main/resources_linux)
 
-## Provided Resources and Library Differences
-
-[macOS v.](https://github.com/f-corvaro/FDF/tree/main/rescources_macos)
-
-[linux v.](https://github.com/f-corvaro/FDF/tree/main/resources_linux)
-
-[maps](https://github.com/f-corvaro/FDF/tree/main/fdf/maps)
-
-<p align="justify">
-
-You can find the resources provided by my 42School for this project in both folders. These resources include:
-- The maps;
-- A binary file for testing the maps, one tailored for each operating system;
-- Different versions of the MinilibX library: I would use the Sierra version for macOS and the MinilibX-Linux for Linux.
-
-The macOS version includes files with the *.m extension in the folder. The Linux version doesn't have these *.m files as Linux doesn't natively support Objective-C. Instead, it uses C files for the implementation. This is one of the main differences between the two versions of the library.
-
-</p>
-
-## Bonus Part
+[Maps](https://github.com/f-corvaro/FDF/tree/main/fdf/maps)
 
 <p align="justify">
 
-You will get some extra points if you can:
+The resources provided by 42 Roma Luiss for this project are available in both the macOS and Linux folders. These resources include:
 
-- Include one extra projection (such as parallel or conic)!
-- Zoom in and out.
-- Translate your model.
-- Rotate your model.
-- Add one more bonus of your choice.
+- Various maps
+- A binary file for testing the maps, specific to each operating system
+- Different versions of the MinilibX library: the Sierra version for macOS and MinilibX-Linux for Linux
+  
+  The macOS version includes files with the .m extension, which are not present in the Linux version due to the lack of native Objective-C support on Linux. Instead, the Linux version uses C files for implementation. This is one of the primary differences between the two versions of the library.
 
 </p>
 
-## Overview
+## Project Requirements - Bonus Part
 
 <p align="justify">
 
-![Overview Gif](https://github.com/f-corvaro/FDF/blob/main/.extra/overview.gif)
+You can earn additional points by implementing the following bonus features:
 
-![Key](https://github.com/f-corvaro/FDF/blob/main/.extra/key.png)
+- Implement an additional projection, such as parallel or conic, to provide more visual options for your model.
+- Enable zoom functionality to allow users to zoom in and out of the model for a closer or wider view.
+- Implement translation functionality to allow users to move the model horizontally and vertically within the window.
+- Enable rotation functionality to allow users to rotate the model around its axis, providing different perspectives.
+- Add one more bonus feature of your choice to enhance the functionality or visual appeal of your program.
 
-![Screen1](https://github.com/f-corvaro/FDF/blob/main/.extra/screen1.png)
-
-![Screen2](https://github.com/f-corvaro/FDF/blob/main/.extra/screen2.png)
+Remember, implementing these bonus features is not mandatory, but it can earn you extra points for your project.
 
 </p>
 
-## MiniLibX
+## MiniLibX Library
+
+### Getting Started with MiniLibX
+
+<p align="justify">
+
+The MiniLibX library is a lightweight X-Window interface library designed for students. It provides a simple and intuitive way to create graphical software without requiring extensive knowledge of X-Window programming. With MiniLibX, you can easily create windows, draw graphics, manage images, and handle basic events. It is a versatile library that allows you to develop interactive graphical applications and display images within a window. MiniLibX is available for both macOS and Linux systems and can be seamlessly integrated into your project. By using MiniLibX, you can streamline the process of working with the X-Window system, making it more accessible and efficient for your programming needs.
+
+</p>
 
 ### Setting Up MiniLibX
 
 <p align="justify">
 
-First of all, you need to choose the version suitable for your system. Secondly, extract the library and rename it to ```mlx``` for macOS and to ```mlx_linux``` for Linux.
+To set up MiniLibX, follow these steps:
 
-MiniLibX for Linux requires xorg, x11 and zlib, therefore you will need to install the following dependencies: xorg, libxext-dev and zlib1g-dev. Installing these dependencies on Ubuntu can be done as follows:
+1. Choose the version of MiniLibX that is suitable for your system.
+2. Extract the library and rename it to `mlx` for macOS or `mlx_linux` for Linux.
+3. Install the required dependencies for MiniLibX on Linux by running the following command on Ubuntu:
+   
+  ```bash
+  sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
+  ```
 
-```bash
-sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
-```
+4. Configure MiniLibX by running the `configure` script in the root of the repository.
+   
+  ```bash
+  ./configure
+  ```
 
-Now, all that's left is to configure MLX. Just run the configure script in the root of the given repository, and you are good to go.
+  You should see the following message:
 
-```bash
-./configure
-```
+  ```bash
+  configure [info] : Execute "make all" from file "test/makefile.gen"
+  gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
+  gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
+  ```
 
-You will receive this message:
+  Note that the MLX library requires the use of the `make all` command, not just `make`.
 
-```bash
-configure [info] : Execute "make all" from file "test/makefile.gen"
-gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
-gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
-```
-
-The MLX library requires the use of the `make all` command; it does not work with the `make` command alone.
-
-</p>
-
-### Understanding MiniLibX
-
-<p align="justify">
-
-MiniLibX is a simple X-Window interface library designed for students. It provides an easy way to create graphical software without needing any X-Window programming knowledge. The library offers simple window creation, a drawing tool, image management, and basic event handling.
-
-The X-Window system is a network-oriented graphical system for Unix. It consists of two main parts: your software that wants to draw something on the screen and/or get keyboard & mouse inputs, and the X-Server that manages the screen, keyboard, and mouse. A network connection must be established between these two entities to send drawing orders and keyboard/mouse events.
+By following these steps, you will have MiniLibX set up and ready to use in your project.
 
 </p>
 
@@ -391,35 +426,35 @@ The X-Window system is a network-oriented graphical system for Unix. It consists
 
 <p align="justify">
 
-To use MiniLibX, you need to include the `mlx.h` header file. This file only contains function prototypes, and no structure is needed. To use MiniLibX functions, you need to link your software with several libraries, including the MiniLibX library itself.
+To integrate MiniLibX into your project, you need to include the `mlx.h` header file. This file contains function prototypes for MiniLibX functions. Additionally, you need to link your software with the necessary libraries, including the MiniLibX library itself.
 
 </p>
 
-### Getting Started with MiniLibX
+### Introduction to MiniLibX
 
 <p align="justify">
 
-Before using other MiniLibX functions, you need to initialize the connection between your software and the display using the `mlx_init` function. This function takes no parameters and returns a `void *` identifier, which is used for further calls to the library routines.
+To get started with MiniLibX, you need to establish a connection between your software and the display. This can be achieved by calling the `mlx_init` function, which returns a `void *` identifier for further library calls.
 
-Other MiniLibX functions include `mlx_new_window` for managing windows, `mlx_pixel_put` for drawing inside a window, `mlx_new_image` for manipulating images, and `mlx_loop` for handling keyboard or mouse events.
+Once the connection is established, you can leverage various MiniLibX functions to manage windows, draw graphics, manipulate images, and handle keyboard or mouse events. Some of these functions include `mlx_new_window`, `mlx_pixel_put`, `mlx_new_image`, and `mlx_loop`.
 
-If `mlx_init()` fails to set up the connection to the X server, it will return NULL. Otherwise, it returns a non-null pointer as a connection identifier.
+If the `mlx_init()` function fails to set up the connection to the X server, it will return NULL. Otherwise, it will provide a non-null pointer as the connection identifier.
 
 </p>
 
-### Image Manipulation with MiniLibX
+### Manipulating Images with MiniLibX
 
 <p align="justify">
 
-- `mlx_new_image`: This function creates a new image in memory. It requires the size of the image to be created and the connection identifier. The function returns a void pointer that is used to manipulate the image later.
+- `mlx_new_image`: This function creates a new image in memory. It requires the size of the image to be created and the connection identifier. The function returns a void pointer that can be used to manipulate the image later.
 
 - `mlx_put_image_to_window`: This function displays an image on the screen. It requires identifiers for the connection to the display, the window to use, and the image. It also needs the coordinates where the image should be placed in the window.
 
-- `mlx_get_data_addr`: This function returns information about the created image, allowing a user to modify it later. It requires the image pointer and the addresses of three different valid integers. It returns a char pointer that represents the beginning of the memory area where the image is stored.
+- `mlx_get_data_addr`: This function returns information about the created image, allowing you to modify it later. It requires the image pointer and the addresses of three different valid integers. It returns a char pointer that represents the beginning of the memory area where the image is stored.
 
 - `mlx_destroy_image`: This function destroys the given image.
 
-- `mlx_get_color_value`: This function translates a standard RGB color parameter to fit the bits_per_pixel requirement of the image, and make the color understandable to the X-Server.
+- `mlx_get_color_value`: This function translates a standard RGB color parameter to fit the bits_per_pixel requirement of the image, making the color understandable to the X-Server.
 
 - `mlx_xpm_to_image` and `mlx_xpm_file_to_image`: These functions create a new image and fill it using the specified xpm_data or filename. They handle transparency but may not be able to read all types of xpm images.
 
@@ -427,136 +462,139 @@ The three functions that create images, `mlx_new_image`, `mlx_xpm_to_image`, and
 
 </p>
 
-### Event Handling in MiniLibX
+## Event Handling in MiniLibX
 
 <p align="justify">
 
-- `mlx_loop`: This function is an infinite loop that waits for an event and then calls a user-defined function associated with this event. It requires the connection identifier.
+Event handling is an essential aspect of graphical software development. In MiniLibX, you can easily handle events such as key presses, mouse clicks, and window exposes. Here are some functions provided by MiniLibX for event handling:
 
-- `mlx_key_hook`, `mlx_mouse_hook`, `mlx_expose_hook`: These functions assign user-defined functions to specific events (key press, mouse button press, and window expose respectively). They require the window identifier, a pointer to the function to be called when the event occurs, and a parameter that will be passed to the function every time it is called.
+- `mlx_loop`: This function creates an infinite loop that waits for an event and then calls a user-defined function associated with that event. It requires the connection identifier.
 
-- `mlx_loop_hook`: This function assigns a user-defined function that will be called when no event occurs. It requires the connection identifier, a pointer to the function to be called, and a parameter that will be passed to the function.
+- `mlx_key_hook`, `mlx_mouse_hook`, `mlx_expose_hook`: These functions allow you to assign user-defined functions to specific events. For example, you can assign a function to be called when a key is pressed, a mouse button is clicked, or a window is exposed. These functions require the window identifier, a pointer to the function to be called, and a parameter that will be passed to the function every time it is called.
 
-When an event occurs, MiniLibX calls the corresponding function with fixed parameters. For key and mouse events, additional information is passed, such as the keycode for the key that was pressed, the coordinates of the mouse click in the window, and which mouse button was pressed.
+- `mlx_loop_hook`: This function allows you to assign a user-defined function that will be called when no event occurs. It requires the connection identifier, a pointer to the function to be called, and a parameter that will be passed to the function.
 
-The MiniLibX also provides a more generic access to all X-Window events through the `mlx_hook` function. The event and mask values will be taken from the X11 include file "X.h".
+When an event occurs, MiniLibX calls the corresponding function with fixed parameters. For key and mouse events, additional information is passed, such as the keycode for the pressed key, the coordinates of the mouse click in the window, and which mouse button was pressed.
+
+Additionally, MiniLibX provides a more generic access to all X-Window events through the `mlx_hook` function. This function allows you to handle any X-Window event by specifying the event and mask values.
 
 </p>
 
-### Window handling in MiniLibX
+### Window Handling in MiniLibX
 
 <p align="justify">
 
-- `mlx_new_window`: This function creates a new window on the screen. It requires the connection identifier, the size of the window, and the title of the window. The function returns a void pointer that is used as a window identifier for other MiniLibX calls.
+- `mlx_new_window`: This function creates a new window on the screen. It requires the connection identifier, the size of the window, and the title of the window. The function returns a void pointer that serves as a window identifier for other MiniLibX calls.
 
-- `mlx_clear_window`: This function clears the given window (fills it with black). It requires the connection identifier and the window identifier.
+- `mlx_clear_window`: This function clears the given window by filling it with black. It requires the connection identifier and the window identifier.
 
 - `mlx_destroy_window`: This function destroys the given window. It requires the same parameters as `mlx_clear_window`.
 
-The `mlx_new_window` function can handle an arbitrary number of separate windows. If it fails to create a new window for any reason, it will return NULL. Otherwise, it returns a non-null pointer as a window identifier.
+The `mlx_new_window` function allows you to create multiple separate windows. If it fails to create a new window, it will return NULL. Otherwise, it returns a non-null pointer as a window identifier.
 
-The `mlx_clear_window` and `mlx_destroy_window` functions currently do not return anything.
+The `mlx_clear_window` and `mlx_destroy_window` functions do not return any values.
 
 </p>
 
-### Drawing and Displaying Content in MiniLibX
+## Drawing and Displaying Content in MiniLibX
 
 <p align="justify">
 
-- `mlx_pixel_put`: This function draws a pixel in the window at the specified coordinates and color. The origin (0,0) is the upper left corner of the window, with the x and y axis pointing right and down respectively. The function requires the connection identifier, the window identifier, the coordinates, and the color.
+To create visually appealing graphics in MiniLibX, you can use the following functions:
 
-- `mlx_string_put`: This function displays a string at the specified coordinates and color in the window. The parameters have the same meaning as for `mlx_pixel_put`. Instead of a pixel, the specified string will be displayed.
+- `mlx_pixel_put`: This function allows you to draw a pixel at specific coordinates and color in the window. The origin (0,0) is located at the upper left corner of the window, with the x and y axis pointing right and down, respectively. You need to provide the connection identifier, window identifier, coordinates, and color as parameters.
 
-In both functions, it is impossible to display anything outside the specified window, nor display in another window in front of the selected one.
+- `mlx_string_put`: This function enables you to display a string at specified coordinates and color in the window. The parameters are the same as `mlx_pixel_put`, but instead of drawing a pixel, the specified string will be displayed.
 
-The color parameter is an integer. The displayed color needs to be encoded in this integer, following a defined scheme. All displayable colors can be split into 3 basic colors: red, green, and blue. These three values, in the 0-255 range, represent how much of each color is mixed up to create the original color. These three values must be set inside the integer to display the right color.
+It's important to note that both functions only work within the specified window and cannot display content outside of it or in front of other windows.
+
+The color parameter is an integer that encodes the desired color. The color is created by mixing three basic colors: red, green, and blue. Each color value ranges from 0 to 255 and represents the intensity of that color in the final color. To display the desired color, you need to set the appropriate values within the integer.
+
+With these functions, you can create and display various graphics and text in your MiniLibX project.
 
 </p>
 
-## Background Knowledge
+## Theoretical Background
 
 <p align="justify">
 
-1. **Putting the pixels in their according places**: In the context of the FDF project, you're given a map of points in a file. Each point represents a pixel and has a corresponding x, y, and z (height) coordinate. You need to translate these coordinates into screen coordinates to know where to draw each pixel.
 
-2. **Connecting those coordinates**: Once you've plotted the individual points, the next step is to connect them with lines to form a wireframe model. This involves drawing a line between each pair of adjacent points.
 
-3. **Choosing an algorithm to draw the lines**: There are many algorithms you can use to draw a line between two points on a 2D grid. Two of the most popular ones are the DDA (Digital Differential Analyzer) and Bresenham's line algorithm. Both of these algorithms calculate which pixels in the grid should be highlighted to form a line between the two points. However, they use different techniques to do this, and each has its own advantages and disadvantages.
+1. **Putting the pixels in their according places**: In the FDF project, a map of points is provided, where each point represents a pixel with x, y, and z (height) coordinates. These coordinates need to be translated into screen coordinates to determine where to draw each pixel.
 
-- **DDA (Digital Differential Analyzer)**: The DDA algorithm is a scan-conversion method for drawing a line which uses simple arithmetic. The concept behind the algorithm is to take the difference in the x-coordinates and y-coordinates, and then divide the difference by the number of steps needed to draw the line. The algorithm uses floating-point arithmetic to calculate the exact positions of the pixels along the line, which makes it highly accurate. However, the use of floating-point arithmetic can make the DDA algorithm slower than other line drawing algorithms, especially on hardware that doesn't handle floating-point operations efficiently.
+2. **Connecting those coordinates**: After plotting the individual points, the next step is to connect them with lines to create a wireframe model. This involves drawing a line between each pair of adjacent points.
 
-- **Bresenham's Line Algorithm**: Bresenham's line algorithm is an efficient method for drawing a line as it only uses integer arithmetic. The algorithm determines the points of an n-dimensional raster that should be selected in order to form a close approximation to a straight line between two given points. It's generally faster than the DDA algorithm because it avoids the use of floating-point arithmetic. However, because it uses approximation to determine which pixels to illuminate, it can be less accurate than the DDA algorithm for certain lines.
+3. **Choosing an algorithm to draw the lines**: Two popular algorithms for drawing lines on a 2D grid are the DDA (Digital Differential Analyzer) and Bresenham's line algorithm. The DDA algorithm uses floating-point arithmetic to calculate the exact positions of pixels along the line, making it highly accurate but potentially slower. Bresenham's line algorithm, on the other hand, uses integer arithmetic and is generally faster but may be less accurate for certain lines.
 
-Both algorithms have their uses and are chosen based on the requirements of the application. If precision is a priority, the DDA algorithm is a better choice. If speed is more important, Bresenham's line algorithm is typically the preferred option.
+4. **Projections**: Projections are used to represent the 3D objects in 2D space. There are three types of projections:
 
-4. **Projections**:
+  - **Parallel Projection**: In parallel projection, lines from each point in the object to the viewer are parallel. This type of projection preserves the size and shape of the object but lacks depth perception. There are three common types of parallel projections:
 
-   1. **Parallel Projection**: In parallel (or orthographic) projection, lines from each point in the object to the viewer are parallel. This means that the size and shape of the object are preserved, but there's no sense of depth - objects further away don't appear smaller. There are three types of parallel projections:
+    - **Frontal (or Orthographic)**: The object is viewed from the front, and only the front face is visible.
+    - **Top-down (or Plan)**: The object is viewed from the top, and only the top face is visible.
+    - **Side (or Profile)**: The object is viewed from the side, and only the side face is visible.
 
-   - **Frontal (or Orthographic)**: The object is viewed from the front and only the front face is visible.
-   - **Top-down (or Plan)**: The object is viewed from the top and only the top face is visible.
-   - **Side (or Profile)**: The object is viewed from the side and only the side face is visible.
+  - **Isometric Projection**: Isometric projection uses the same scale for every axis, resulting in a 3D effect without perspective. Lines are drawn at 30-degree angles, providing a clear view of all sides.
+   <p align="center">
+    <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/isometric_parallel.png" alt="Isometric and Parallel">
+   </p>
 
-   2. **Isometric Projection**: Isometric projection is a type of parallel projection where the same scale is used for every axis, resulting in a 3D effect without perspective. Lines are drawn at 30-degree angles, which gives a clear view of all sides and all dimensions are proportionally represented.
+  - **Conic (or Perspective) Projection**: Conic projection simulates realistic depth perception by converging lines from each point to a single point (the viewer's eye). However, the size and shape of the object may be distorted. There are two types of perspective projections:
 
-<p align="center">
-  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/isometric_parallel.png" alt="Isometric and Parallel">
-</p>
+   - **One-point perspective**: This type of perspective projection has a single vanishing point. It is typically used when the viewer is facing one side of the object directly.
+   - **Two-point perspective**: This type of perspective projection has two vanishing points. It is typically used when the viewer is facing the corner of an object.
+   
+   <p align="center">
+    <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/Perspective.png" alt="Perspective" width="50%" height="50%">
+   </p>
 
-   3. **Conic (or Perspective) Projection**: In conic projection, lines from each point in the object converge at a single point (the viewer's eye). This gives a realistic view with a sense of depth - objects further away appear smaller. However, the size and shape of the object are distorted. There are two types of perspective projections:
+5. **Points and Vectors**: In the FDF project, points in the landscape are represented as vectors in 3D space. Vectors can be added together and multiplied by scalars, which are operations frequently used in the project.
 
-   - **One-point perspective**: There's a single vanishing point. This is typically used when the viewer is facing one side of the object directly.
-   - **Two-point perspective**: There are two vanishing points. This is typically used when the viewer is facing the corner of an object.
+6. **Transformations**: Transformations modify the points in the landscape. The three basic transformations are translation, rotation, and scaling.
 
-<p align="center">
-  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/Perspective.png" alt="Perspective" width="50%" height="50%">
-</p>
+ - **Translation**: Translation involves moving the object without changing its orientation or size. It is achieved by adding a certain amount to the x, y, and z coordinates of each point.
+ 
+   <p align="center">
+    <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/3d-translation.png" alt="3D Translation">
+   </p>
 
-5. **Points and Vectors**: In the FDF project, each point in the landscape is represented as a vector in 3D space. A vector is essentially an ordered list of numbers, which in this case are the x, y, and z coordinates of a point. Vectors can be added together and multiplied by scalars (individual numbers), which are operations that you'll use frequently in the FDF project.
+ - **Rotation**: Rotation involves turning the object around the origin. It can be represented as a matrix operation on the vectors. For example, to rotate a point around the origin, you multiply its vector by a rotation matrix. The rotation matrix is determined by the angle of rotation and the axis of rotation.
 
-6. **Transformations**: Transformations are ways of modifying the points in the landscape. The three basic transformations are:
+   <p align="center">
+    <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/elementary-rotations.png" alt="Elementary Rotations" width="75%" height="75%">
+   </p>
 
-   - **Translation**: This involves moving the object without changing its orientation or size. In terms of vectors, this means adding a certain amount to the x, y, and z coordinates of each point.
+ - **Scaling**: Scaling involves changing the size of the object without changing its shape or orientation. In terms of vectors, this means multiplying the x, y, and z coordinates of each point by a certain factor.
 
-<p align="center">
-  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/3d-translation.png" alt="3D Translation">
-</p>
+   <p align="center">
+    <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/scaling.png" alt="Scaling">
+   </p>
 
-   - **Rotation**: This involves turning the object around the origin. This can be represented as a matrix operation on the vectors. For example, to rotate a point around the origin, you multiply its vector by a rotation matrix. The rotation matrix is determined by the angle of rotation and the axis of rotation.
+ These transformations are fundamental in manipulating points and shapes in the landscape.
 
-<p align="center">
-  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/elementary-rotations.png" alt="Elementary Rotations" width="75%" height="75%">
-</p>
+7. **Matrix Operations**: Matrix operations, such as matrix multiplication, are used to apply transformations to points. The order of multiplication matters, so it's important to consider the sequence of transformations.
 
-   - **Scaling**: This involves changing the size of the object without changing its shape or orientation. In terms of vectors, this means multiplying the x, y, and z coordinates of each point by a certain factor.
+8. **Systems of Equations**: Solving systems of linear equations is necessary in various aspects of the FDF project, such as interpolating between points to draw lines.
 
-<p align="center">
-  <img src="https://github.com/f-corvaro/FDF/blob/main/.extra/scaling.png" alt="Scaling">
-</p>
-
-7. **Matrix Operations**: Many of the operations in the FDF project involve multiplying matrices and vectors. This is a key operation in linear algebra. For example, to apply a transformation to a point, you multiply the matrix representing the transformation by the vector representing the point. Matrix multiplication is associative, which means that the order of multiplication matters. This is important to keep in mind when applying multiple transformations.
-
-8.  **Systems of Equations**: Linear algebra also involves solving systems of linear equations, which can come up in various ways in the FDF project. For example, when you're interpolating between two points to draw a line, you're essentially solving a system of equations to find the points on the line.
-
-In summary, linear algebra provides the mathematical framework for manipulating points and shapes in the FDF project. Understanding the basics of vectors, matrices, and linear transformations can greatly help in implementing the project.
+In summary, understanding linear algebra concepts, such as vectors, matrices, and transformations, is crucial for manipulating points and shapes in the FDF project.
 
 </p>
 
-## Tester
+## Automated Testing for the FDF Project
 
-### run_fdf_tests.sh
+### `run_fdf_tests.sh` Script
 
 <p align="justify">
 
-The `run_fdf_tests.sh` script is a testing tool for the FDF project. It's designed to automate the process of running the FDF program with various map files and checking for memory leaks. 
+The `run_fdf_tests.sh` script is a valuable tool for automating the testing process of the FDF project. It simplifies the task of running the FDF program with multiple map files and checking for memory leaks.
 
 When executed, the script prompts the user to enter the directory path where the map files are located. If no path is provided, it defaults to a `./maps` directory.
 
-The script identifies the operating system it's running on and uses the appropriate tool to check for memory leaks. On Linux, it uses `valgrind`, and on macOS (Darwin), it uses the `leaks` command. 
+The script intelligently detects the operating system it's running on and utilizes the appropriate tool to check for memory leaks. On Linux, it employs `valgrind`, while on macOS (Darwin), it utilizes the `leaks` command.
 
-For each map file in the specified directory, the script runs the FDF program, checks for memory leaks, and displays the results. It also provides a progress update, indicating which map is currently being processed and how many maps are left.
+For each map file in the specified directory, the script runs the FDF program, performs memory leak checks, and displays the results. It also provides a progress update, indicating which map is currently being processed and how many maps are left.
 
-Please note that using this script may slow down the performance of the FDF program. This is not a problem with the FDF program itself, but a side effect of the memory leak checks. These checks involve monitoring the program's memory usage in detail, which can be a resource-intensive process.
+Please note that using this script may impact the performance of the FDF program. This is not a flaw in the FDF program itself, but rather a consequence of the memory leak checks. These checks involve monitoring the program's memory usage in detail, which can be resource-intensive.
 
 </p>
 
@@ -564,17 +602,22 @@ Please note that using this script may slow down the performance of the FDF prog
 
 <p align="justify">
 
-You need to store the script into fdf folder and run the script:
+To utilize the script, follow these steps:
 
-```shellscript
+1. Store the `run_fdf_tests.sh` script in the FDF project folder.
+2. Open a terminal and navigate to the FDF project folder.
+3. Run the script using the following command:
+
+```bash
 bash run_fdf_tests.sh
 ```
 
 </p>
 
-## Evaluation
+## Evaluation Process
 
-### Correction sheet
+### Correction Sheet
+
 <a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf1.png">
 
 <a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf2.png">
@@ -586,20 +629,7 @@ bash run_fdf_tests.sh
 </p>
 <br>
 
-
-## Support Me
-
-<p align="justify">
-Remember to ⭐ the repository.
-If you want to support me:</p>
-
-<p align="center">
-<a href="https://ko-fi.com/fcorvaro"><img width="180" img align="center" src="https://github.com/f-corvaro/42.common_core/blob/main/.extra/support-me-ko-fi.svg"><alt=""></a>
-<a href="https://github.com/sponsors/f-corvaro"><img width="180" img align="center" src="https://github.com/f-corvaro/42.common_core/blob/main/.extra/support-me-github.svg"><alt=""></a>
-
-<br>
-
-## Skills developed
+## Developed Skills
 
 <p align="center">
   <a href="https://skillicons.dev">
@@ -607,17 +637,24 @@ If you want to support me:</p>
   </a>
 </p><br>
 
-## Sources
+## References
 
-- [minilibx doc](https://harm-smits.github.io/42docs/libs/minilibx)
+- [MiniLibX Documentation](https://harm-smits.github.io/42docs/libs/minilibx)
+- [Fdf Explained (42 École Project)](https://www.youtube.com/watch?v=QVobB3pZoIY)
+- [Fil de Fer (Fdf) - The First Graphical Project at 42](https://m4nnb3ll.medium.com/fil-de-fer-fdf-the-first-graphical-project-at-42-the-network-5cce69203448)
+- [Linear Algebra](https://en.wikipedia.org/wiki/Linear_algebra)
+- [3D Rotations](https://www.youtube.com/watch?app=desktop&v=wg9bI8-Qx2Q)
 
-- [Fdf explained (42 ecole project)](https://www.youtube.com/watch?v=QVobB3pZoIY)
+<br>
 
-- [Fil de Fer(Fdf)](https://m4nnb3ll.medium.com/fil-de-fer-fdf-the-first-graphical-project-at-42-the-network-5cce69203448)
+## Support and Contributions
 
-- [linear algebra](https://en.wikipedia.org/wiki/Linear_algebra)
+<p align="center">
+If you find this repository helpful, please consider starring it to show your support. Your support is greatly appreciated!</p>
 
-- [Rotations in 3D](https://www.youtube.com/watch?app=desktop&v=wg9bI8-Qx2Q)
+<p align="center">
+<a href="https://ko-fi.com/fcorvaro"><img width="180" img align="center" src="https://github.com/f-corvaro/42.common_core/blob/main/.extra/support-me-ko-fi.svg"><alt=""></a>
+<a href="https://github.com/sponsors/f-corvaro"><img width="180" img align="center" src="https://github.com/f-corvaro/42.common_core/blob/main/.extra/support-me-github.svg"><alt=""></a>
 
 <br>
 
