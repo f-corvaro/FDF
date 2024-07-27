@@ -618,14 +618,17 @@ bash run_fdf_tests.sh
 
 ### Correction Sheet
 
+<p align="center">
 <a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf1.png">
-
+</p>
+<p align="center">
 <a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf2.png">
-
+</p>
+<p align="center">
 <a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf3.png">
-
+</p>
+<p align="center">
 <a href="https://github.com/f-corvaro/FDF"><img width="650" src="https://github.com/f-corvaro/FDF/blob/main/.extra/.cs/fdf4.png">
-
 </p>
 <br>
 
