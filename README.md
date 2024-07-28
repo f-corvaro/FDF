@@ -462,7 +462,7 @@ The three functions that create images, `mlx_new_image`, `mlx_xpm_to_image`, and
 
 </p>
 
-## Event Handling in MiniLibX
+### Event Handling in MiniLibX
 
 <p align="justify">
 
@@ -496,7 +496,7 @@ The `mlx_clear_window` and `mlx_destroy_window` functions do not return any valu
 
 </p>
 
-## Drawing and Displaying Content in MiniLibX
+### Drawing and Displaying Content in MiniLibX
 
 <p align="justify">
 
